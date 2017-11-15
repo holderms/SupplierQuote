@@ -19,6 +19,7 @@ app.get('/index.html',function(req,res){
   for (var b in req.query){
     params.push({'name':b,'value':req.body[b]})
   }
+  console.log("in get");
   var login = false;
   if(params[0].name=="username" && params[0].value=="employeeTest"){
     if(params[1].name=="password" && params[1].value=="testpassword"){
@@ -39,7 +40,7 @@ app.post('SupplierQuote/index.html',function(req,res){
   // }
   // var context = {};
   // context.query = qParams;
-
+  console.log("in post");
   var bParams = [];
   for (var b in req.body){
     bParams.push({'name':b,'value':req.body[b]})
