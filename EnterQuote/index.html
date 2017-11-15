@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter a new quote</title>
+</head>
+
+<body>
+Optional fields are marked with an asterick*
+
+<form action="index.html">
+<b>Supplier Name:</b> # Pre-populate based on login<br/>
+<b>Supplier Code:</b> # Pre-populate based on login<br/>
+<b>Quote Number:</b> # auto generate<br/>
+
+<table>
+  <thead>
+    <tr>
+      <td>Part Number</td>
+      <td>Part Name*</td>
+      <td>Repair Type</td>
+      <td>Repair Price</td>
+    </tr>
+  </thead>
+  <tr>
+      <td><input type="text" name="PN" maxlength="30"></td>
+      <td><input type="text" name="nomenclature" maxlength="50"></td>
+      <td><select name="type">
+        <option value="test">Test and Evaluation</option>
+        <option value="nff">No fault found</option>
+        <option value="minor">Minor repair</option>
+        <option value="major">Major repair</option>
+        <option value="overhaul">Overhaul</option></td>
+      <td><input type="text" name="price" maxlength="12"></td>
+
+  </tr>
+</table>
+
+<b>Enter description of work:</b>
+<br/>
+<textarea name="description">Describe the repair and any special circumstances</textarea>
+<br/>
+<input type="submit" value="Submit Quote"/>
+</form>
+
+<!--scripts for bootstrap-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
