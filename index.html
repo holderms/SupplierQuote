@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Big Airplane Repair Quote Entry System</title>
+  <title>AeroSpace Corp Quote Entry System</title>
 
   <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
- 
+
 </head>
 
 <body>
 <h1>Welcome to the sample Repair Quote Entry System.</h1>
 <!--Bootstrap based carousel & tutorial https://www.w3schools.com/bootstrap/bootstrap_carousel.asp-->
 
-<div id="imagesCarousel" class="carousel slide" data-ride="carousel">
+<div id="imagesCarousel" class="carousel slide" data-ride="carousel" interval="2500">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="sky.jpg" alt="sky">
@@ -33,7 +33,7 @@
 <br>Password: testpassword
 <br>
 <br>Enter Username and Password: </p>
-<form action="index.html">
+<form action="index.html" method="post">
   <p>Username:
     <input type="text" name="username" maxlength="15"/>
   </p>
@@ -41,7 +41,7 @@
     <input type="password" name="password" maxlenght="15"/>
     <input type="submit" value="Login"/>
 </form>
-
+<script src="main.js"></script>
 <a href="https://en.wikipedia.org/wiki/Aerospace" id="link"> Learn more about AeroSpace Corp</a>
 <!--Required JS for Bootstrap/carousel-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -5,7 +5,6 @@ var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 //Post info
 var bodyParser = require('body-parser');
-var carousel = require('carousel')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -27,32 +26,32 @@ app.get('/index.html',function(req,res){
 
 
 //Pass in body via ARC
-app.post('/',function(req,res){
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
-  }
-  var context = {};
-  context.query = qParams;
+app.post('/index.html',function(req,res){
+  // var qParams = [];
+  // for (var p in req.query){
+  //   qParams.push({'name':p,'value':req.query[p]})
+  // }
+  // var context = {};
+  // context.query = qParams;
 
   var bParams = [];
   for (var b in req.body){
     bParams.push({'name':b,'value':req.body[b]})
   }
+  var login = false;
+  if(bParams[0].name="username" && bParams[].value="employeeTest"){
+    if(bParams[1].name="password" && bParams[1].value="testpassword"){
+      login = true;
+      res.sendFile("EnterQuote/index.html");
+    }
+  } else {
+    res.render('loginError', context);
+  }
   // console.log(bParams);
   // console.log(req.body);
-
-  context.body = bParams;
-  res.render('postRes', context);
  });
 
-//Pass data in body (not working)
-// https://stackoverflow.com/questions/39175587/request-body-vs-request-params-vs-request-query
-// http://expressjs.com/en/api.html
-// app.post('/postPage', function(req, res){
-//   req.send = {name:"Samantha", Last:"Avramovic", Maiden:"Holderman"}
-//   console.log(JSON.parse(req.responseText));
-// });
+
 
 
 
