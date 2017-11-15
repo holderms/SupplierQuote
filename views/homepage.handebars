@@ -1,7 +1,7 @@
 {{!--Handlebar for main page }}
 <h1>Welcome to the sample Repair Quote Entry System.</h1>
 
-<div id="randomCarousel" class="carousel slide" data-ride="carousel">
+<div id="imagesCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="sky.jpg" alt="sky">
@@ -15,3 +15,18 @@
       <img src="keyboard.jpg" alt="keyboard">
     </div>
   </div>
+
+<p>Please login below. Passwords are case-sensitive</>
+
+<p>Username: employeeTest
+<br>Password: testpassword
+<br>
+<br>Enter Username and Password: </p>
+<form action="index.html">
+  <p>Username:
+    <input type="text" name="username" maxlength="15"/>
+  </p>
+  <p>Password:
+    <input type="password" name="password" maxlenght="15"/>
+    <input type="submit" value="Login"/>
+</form>
