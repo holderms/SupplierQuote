@@ -39,7 +39,7 @@ app.post('/index.html',function(req,res){
     bParams.push({'name':b,'value':req.body[b]})
   }
   var login = false;
-  if(bParams[0].name=="username" && bParams[].value=="employeeTest"){
+  if(bParams[0].name=="username" && bParams[0].value=="employeeTest"){
     if(bParams[1].name=="password" && bParams[1].value=="testpassword"){
       login = true;
       res.sendFile("EnterQuote/index.html");
