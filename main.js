@@ -15,18 +15,24 @@ app.set('port', 14768);
 
 //From lecture; Send data to get or postRes view & display as a list
 app.get('/index.html',function(req,res){
-  var qParams = [];
-  for (var p in req.query){
-    qParams.push({'name':p,'value':req.query[p]})
+  var params = [];
+  for (var b in req.query){
+    params.push({'name':b,'value':req.body[b]})
   }
-  var context = {};
-  context.dataList = qParams;
-  res.render('getRes', context);
+  var login = false;
+  if(params[0].name=="username" && params[0].value=="employeeTest"){
+    if(params[1].name=="password" && params[1].value=="testpassword"){
+      login = true;
+      res.sendFile("EnterQuote/index.html");
+    }
+  } else {
+    res.render('loginError', context);
+  }
  });
 
 
 //Pass in body via ARC
-app.post('/index.html',function(req,res){
+app.post('SupplierQuote/index.html',function(req,res){
   // var qParams = [];
   // for (var p in req.query){
   //   qParams.push({'name':p,'value':req.query[p]})
