@@ -9,3 +9,5 @@ document.getElementById("randomNo");
 randomNo = getRandom();
 
 document.append(randomNo);
+
+//Reference https://css-tricks.com/generate-a-random-number/ to remind me about <div>
