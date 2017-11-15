@@ -41,19 +41,31 @@ app.post('SupplierQuote/index.html',function(req,res){
   // var context = {};
   // context.query = qParams;
   console.log("in post");
-  var bParams = [];
-  for (var b in req.body){
-    bParams.push({'name':b,'value':req.body[b]})
-  }
+
   var login = false;
-  if(bParams[0].name=="username" && bParams[0].value=="employeeTest"){
-    if(bParams[1].name=="password" && bParams[1].value=="testpassword"){
+  if(params[0].name=="username" && params[0].value=="employeeTest"){
+    if(params[1].name=="password" && params[1].value=="testpassword"){
       login = true;
       res.sendFile("EnterQuote/index.html");
     }
   } else {
     res.render('loginError', context);
   }
+
+
+  // var bParams = [];
+  // for (var b in req.body){
+  //   bParams.push({'name':b,'value':req.body[b]})
+  // }
+  // var login = false;
+  // if(bParams[0].name=="username" && bParams[0].value=="employeeTest"){
+  //   if(bParams[1].name=="password" && bParams[1].value=="testpassword"){
+  //     login = true;
+  //     res.sendFile("EnterQuote/index.html");
+  //   }
+  // } else {
+  //   res.render('loginError', context);
+  // }
   // console.log(bParams);
   // console.log(req.body);
  });
