@@ -1,0 +1,17 @@
+{{!--From lecture Express Forms--}}
+{{!--Prints request data as a unordered list--}}
+{{!-- Changed "param" to "datalist" (needs to match call in js)--}}
+<h1>Post request received</h1>
+<ul>
+  Query data:
+  {{#each query}}
+    <li>{{this.name}}: {{this.value}}
+  {{/each}}
+</ul>
+</br>
+<ul>
+  Body data:
+  {{#each body}}
+    <li>{{this.name}}: {{this.value}}
+  {{/each}}
+</ul>
