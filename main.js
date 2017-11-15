@@ -6,6 +6,7 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 //Post info
 var bodyParser = require('body-parser');
 var carousel = require('carousel')
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -14,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.set('port', 14768);
 
 //From lecture; Send data to get or postRes view & display as a list
-app.get('/',function(req,res){
+app.get('/index.html',function(req,res){
   var qParams = [];
   for (var p in req.query){
     qParams.push({'name':p,'value':req.query[p]})
