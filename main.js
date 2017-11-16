@@ -7,4 +7,5 @@ if(username === "employeeTest" && password === "testpassword"){
   window.location.replace("EnterQuote/index.html");
 } else {
   console.log("Wrong username/password combination. Please try again.")
+  console.log("Username: " + username + " Password: " + password)
 }
