@@ -1,22 +1,3 @@
-var username = document.getElementById("username");
-var password = document.getElementById("password");
-
-var content = readFileSync("userInfo.json");
-console.log(content[0]);
-fileUsername = content.username;
-filePassword = content.password;
-document.append(quoteNo);
-
-
-if(username == fileUsername && password ==filePassword){
-  //https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage
-  window.location.replace("EnterQuote.index");
-}
-
-
-
-// FS.JS, because githb is a jerk
-
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
