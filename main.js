@@ -9,6 +9,7 @@ filePassword = content.password
 document.append(quoteNo);
 
 
-if(username == fileUsername && password ==filePassword{
+if(username == fileUsername && password ==filePassword){
   //https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage
-  window.location.replace("EnterQuote.index") }
+  window.location.replace("EnterQuote.index");
+}
