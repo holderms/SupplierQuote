@@ -1,3 +1,4 @@
+@@ -1,17 +0,0 @@
 var randomNo = document.getElementById("randomNo");
 
 randomNo = function getRandomInt("1000", "2500") {
