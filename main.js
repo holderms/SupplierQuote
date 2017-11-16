@@ -1,5 +1,5 @@
-var username = getElementById("username");
-var password = getElementById("password");
+var username = document.getElementById("username");
+var password = document.getElementById("password");
 
 var fs = require("fs");
 var content = fs.readFileSync("userInfo.json");
