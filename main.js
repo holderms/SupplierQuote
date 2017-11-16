@@ -5,7 +5,7 @@ var fs = require("fs");
 var content = fs.readFileSync("userInfo.json");
 console.log(content[0]);
 fileUsername = content.username;
-filePassword = content.password
+filePassword = content.password;
 document.append(quoteNo);
 
 
